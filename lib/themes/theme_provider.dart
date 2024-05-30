@@ -25,5 +25,6 @@ class ThemeProvider with ChangeNotifier{
     }else{
       themeData = lightMode; // If current theme is dark, switch to light
     }
+    notifyListeners();
   }
 }
