@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:full_food_delivery_app_with_backend/models/food.dart';
 
-class Restaurant {
+class Restaurant extends ChangeNotifier {
   //Lists of food menu
 
   final List<Food> _menu = [
@@ -19,7 +20,7 @@ class Restaurant {
           Addon(name: 'Avocado', price: 0.99),
         ]),
     Food(
-        name: 'Classic Cheeseburger',
+        name: 'BBQ Bacon Burger',
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
@@ -32,7 +33,7 @@ class Restaurant {
           Addon(name: 'Avocado', price: 0.99),
         ]),
     Food(
-        name: 'Classic Cheeseburger',
+        name: 'Veggie Burger',
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
@@ -45,7 +46,7 @@ class Restaurant {
           Addon(name: 'Avocado', price: 0.99),
         ]),
     Food(
-        name: 'Classic Cheeseburger',
+        name: 'Aloha Burger',
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
@@ -58,7 +59,7 @@ class Restaurant {
           Addon(name: 'Avocado', price: 0.99),
         ]),
     Food(
-        name: 'Classic Cheeseburger',
+        name: 'Blue Moon Burger',
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
@@ -73,65 +74,65 @@ class Restaurant {
 
     //salads
     Food(
-        name: 'Classic Salads',
+        name: 'Ceaser Salad',
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
             'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.salads,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
           Addon(name: 'Avocado', price: 0.99),
         ]),
     Food(
-        name: 'Classic Salads',
+        name: 'Greek Salad',
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
             'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.salads,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
           Addon(name: 'Avocado', price: 0.99),
         ]),
     Food(
-        name: 'Classic Salads',
+        name: 'Quinoa Salad',
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
             'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.salads,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
           Addon(name: 'Avocado', price: 0.99),
         ]),
     Food(
-        name: 'Classic Salads',
+        name: 'Asian Sesame Salad',
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
             'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.salads,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
           Addon(name: 'Avocado', price: 0.99),
         ]),
     Food(
-        name: 'Classic Salads',
+        name: 'South West Chicken Salad',
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
             'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.salads,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -146,7 +147,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.sides,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -159,7 +160,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.sides,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -172,7 +173,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.sides,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -185,7 +186,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.sides,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -198,7 +199,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.sides,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -213,7 +214,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.desserts,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -226,7 +227,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.desserts,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -239,7 +240,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.desserts,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -252,7 +253,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.desserts,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -265,7 +266,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.desserts,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -280,7 +281,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.drinks,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -293,7 +294,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.drinks,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -306,7 +307,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.drinks,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -319,7 +320,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.drinks,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),
@@ -332,7 +333,7 @@ class Restaurant {
         imagePath:
             'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
         price: 0.99,
-        catagory: FoodCatagories.burger,
+        catagory: FoodCatagories.drinks,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
           Addon(name: 'Bacin', price: 0.99),

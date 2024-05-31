@@ -55,8 +55,7 @@ class MyTabBar extends StatelessWidget {
 
     return  TabBar(
       controller: tabController,
-      tabs: _buildCategoryTabs()
-      
+      tabs: _buildCategoryTabs()      
       );
   }
 }
