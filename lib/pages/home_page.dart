@@ -3,9 +3,33 @@ import 'package:full_food_delivery_app_with_backend/components/my_current_locati
 import 'package:full_food_delivery_app_with_backend/components/my_description_box.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_drawer.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_silver_app_bar.dart';
+import 'package:full_food_delivery_app_with_backend/components/my_tab_bar.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
+
+  //tab Controller
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _tabController = TabController(length: 3, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _tabController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +41,7 @@ class HomePage extends StatelessWidget {
       body: NestedScrollView(
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
           MySilverAppBar(
-            title: const Text('title'), 
+            title: MyTabBar(tabController: _tabController), 
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -34,7 +58,19 @@ class HomePage extends StatelessWidget {
                 const MyDescriptionBox(),
             ],) )
         ],
-        body: Container(color: Colors.lightBlue,),
+        body: TabBarView(
+          controller: _tabController,
+          children: [
+            ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context,index)=> const Text('First tab items')),
+            ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context,index)=> const Text('Second tab items')),
+            ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context,index)=> const Text('Third tab items')),
+          ],),
       ),
 
     );
