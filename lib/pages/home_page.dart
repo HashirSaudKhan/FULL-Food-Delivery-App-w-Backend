@@ -4,6 +4,7 @@ import 'package:full_food_delivery_app_with_backend/components/my_description_bo
 import 'package:full_food_delivery_app_with_backend/components/my_drawer.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_silver_app_bar.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_tab_bar.dart';
+import 'package:full_food_delivery_app_with_backend/models/food.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   void initState() {
     // TODO: implement initState
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: FoodCatagories.values.length, vsync: this);
   }
 
   @override
@@ -70,6 +71,12 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             ListView.builder(
               itemCount: 5,
               itemBuilder: (context,index)=> const Text('Third tab items')),
+            ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context,index)=> const Text('Fourth tab items')),
+            ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context,index)=> const Text('Five tab items')),
           ],),
       ),
 
