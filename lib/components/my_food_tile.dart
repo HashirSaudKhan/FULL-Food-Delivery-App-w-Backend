@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:full_food_delivery_app_with_backend/models/food.dart';
+import 'package:full_food_delivery_app_with_backend/pages/food_page.dart';
 
 class FoodTile extends StatelessWidget {
   final Food food;
@@ -11,7 +12,12 @@ class FoodTile extends StatelessWidget {
     return Column(
       children: [
         GestureDetector(
-          onTap: () {},
+          //Navigator to the FoodPage
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context)=> FoodPage(food: food)));
+          },
           child: Padding(
             padding: const EdgeInsets.all(15.0),
             child: Row(

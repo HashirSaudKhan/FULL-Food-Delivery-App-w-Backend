@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_current_location.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_description_box.dart';
@@ -62,8 +61,6 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         );
     }).toList();
   }
-
-
 
   @override
   Widget build(BuildContext context) {
