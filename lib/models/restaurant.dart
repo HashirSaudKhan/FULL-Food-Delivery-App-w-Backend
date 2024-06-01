@@ -37,7 +37,7 @@ class Restaurant extends ChangeNotifier {
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
-            'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
+            'lib/images/burgers/burger_2.jpg',
         price: 0.99,
         catagory: FoodCatagories.burger,
         availableAddons: [
@@ -50,7 +50,7 @@ class Restaurant extends ChangeNotifier {
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
-            'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
+            'lib/images/burgers/burger_3.jpg',
         price: 0.99,
         catagory: FoodCatagories.burger,
         availableAddons: [
@@ -63,7 +63,7 @@ class Restaurant extends ChangeNotifier {
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
-            'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
+            'lib/images/burgers/burger_3.jpg',
         price: 0.99,
         catagory: FoodCatagories.burger,
         availableAddons: [
@@ -78,7 +78,7 @@ class Restaurant extends ChangeNotifier {
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
-            'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
+            'lib/images/salads/salad_1.png',
         price: 0.99,
         catagory: FoodCatagories.salads,
         availableAddons: [
@@ -91,7 +91,7 @@ class Restaurant extends ChangeNotifier {
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
-            'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
+            'lib/images/salads/salad_2.png',
         price: 0.99,
         catagory: FoodCatagories.salads,
         availableAddons: [
@@ -104,7 +104,7 @@ class Restaurant extends ChangeNotifier {
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
-            'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
+            'lib/images/salads/salad_3.png',
         price: 0.99,
         catagory: FoodCatagories.salads,
         availableAddons: [
@@ -117,7 +117,7 @@ class Restaurant extends ChangeNotifier {
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
-            'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
+            'lib/images/salads/salad_4.png',
         price: 0.99,
         catagory: FoodCatagories.salads,
         availableAddons: [
@@ -130,7 +130,7 @@ class Restaurant extends ChangeNotifier {
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
         imagePath:
-            'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
+            'lib/images/salads/salad_5.png',
         price: 0.99,
         catagory: FoodCatagories.salads,
         availableAddons: [
