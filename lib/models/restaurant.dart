@@ -350,7 +350,7 @@ class Restaurant extends ChangeNotifier {
   G E T T E R S
   */
   List<Food> get menu => _menu;
-
+  List<CardItem> get cart => _cart;
 
   /*
   O P E R A T I O N S
@@ -358,6 +358,7 @@ class Restaurant extends ChangeNotifier {
 
   //User cart
   final List<CardItem> _cart = [];
+
 
   // add to cart
   
@@ -405,6 +406,7 @@ class Restaurant extends ChangeNotifier {
       }
 
     }
+    notifyListeners();
   }
 
   // get total price of cart 
@@ -419,6 +421,7 @@ class Restaurant extends ChangeNotifier {
       }
     }
     return total;
+    
   }
 
 
