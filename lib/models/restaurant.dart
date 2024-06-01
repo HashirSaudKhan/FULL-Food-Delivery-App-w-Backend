@@ -1,4 +1,8 @@
+import 'dart:collection';
+
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:full_food_delivery_app_with_backend/models/cart_item.dart';
 import 'package:full_food_delivery_app_with_backend/models/food.dart';
 
 class Restaurant extends ChangeNotifier {
@@ -352,16 +356,90 @@ class Restaurant extends ChangeNotifier {
   O P E R A T I O N S
   */
 
+  //User cart
+  final List<CardItem> _cart = [];
+
   // add to cart
+  
+  void addToCart(Food food,List<Addon> selectedAddon){
+    // see if there is a cart item already eith the same food and selected addons
+    CardItem? cartItem = _cart.firstWhereOrNull((item){
+      //check if the food items are the same 
+      bool isSameFood = item.food == food;
+
+      //check if the list of selected addons are the same
+      bool isSameAddons = ListEquality().equals(item.selectedAddon, selectedAddon);
+
+      return isSameFood && isSameAddons;
+    
+    });
+
+    // if item already exists, increase it's quantity
+    if(cartItem != null){
+      cartItem.quantity++;
+    }
+
+    // otherwise, add a new cart item to the cart 
+    else{
+      _cart.add(
+        CardItem(
+          food: food, 
+          selectedAddon: selectedAddon)
+      );
+    }
+
+    notifyListeners();
+  }
+
 
   // remove from cart
 
+  void removeFromCart(CardItem cartItem){
+    int cartIndex = _cart.indexOf(cartItem);
+    
+    if(cartIndex != -1){
+      if(_cart[cartIndex].quantity>1){
+        _cart[cartIndex].quantity--;
+      }else{
+        _cart.removeAt(cartIndex);
+      }
+
+    }
+  }
+
   // get total price of cart 
+  double getTotalPrice() {
+    double total = 0.0;
+
+    for (CardItem cardItem in _cart){
+      double itemTotal = cardItem.food.price;
+      
+      for (Addon addon in cardItem.selectedAddon){
+        itemTotal += addon.price;
+      }
+    }
+    return total;
+  }
+
 
   // get total number of items in cart
 
+  int getTotalItemCount(){
+    int totalItemCount = 0;
+
+    for (CardItem cardItem in _cart){
+      totalItemCount += cardItem.quantity;
+    }
+
+    return totalItemCount;
+  }
+
   //clear cart
 
+  void clearCard(){
+    _cart.clear();
+    notifyListeners();
+  }
   /*
    H E L P E R S
   */
