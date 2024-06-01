@@ -1,5 +1,3 @@
-import 'dart:collection';
-
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:full_food_delivery_app_with_backend/models/cart_item.dart';
