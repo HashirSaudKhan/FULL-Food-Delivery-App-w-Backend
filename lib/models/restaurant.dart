@@ -415,6 +415,7 @@ class Restaurant extends ChangeNotifier {
     double total = 0.0;
 
     for (CardItem cardItem in _cart){
+      // ignore: unused_local_variable
       double itemTotal = cardItem.food.price;
       
       for (Addon addon in cardItem.selectedAddon){
