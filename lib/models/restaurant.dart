@@ -415,12 +415,12 @@ class Restaurant extends ChangeNotifier {
     double total = 0.0;
 
     for (CardItem cardItem in _cart){
-      // ignore: unused_local_variable
       double itemTotal = cardItem.food.price;
       
       for (Addon addon in cardItem.selectedAddon){
         itemTotal += addon.price;
       }
+      total += itemTotal;
     }
     return total;
     
@@ -453,13 +453,28 @@ class Restaurant extends ChangeNotifier {
 
   String displayCartReceipt(){
     final receipt = StringBuffer();
+    /*
+    StringBuffer class Dart mein mutable strings ko efficiently concatenate karne ke liye use hoti hai. 
+    Yeh especially useful hai jab aapko ek string ko dynamically build karna ho, 
+    jaise ke ek receipt ya report generate karte waqt.
+    */
 
     receipt.writeln("Here's your receipt");
+    /*
+    receipt.writeln("Here's your receipt");: writeln method ek line ko string buffer mein 
+    add karta hai aur automatically ek newline character (\n) bhi insert karta hai. Is line mein,
+    "Here's your receipt" string buffer mein add kiya jata hai aur newline character bhi append hota hai.
+    */
     receipt.writeln();
 
     //format the date to include up to second only
     String formattedDate = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
-
+    /*
+    DateFormat() class Dart ke intl package mein define ki gayi hai. intl package, 
+    Internationalization (i18n) aur Localization (l10n) ke liye use hota hai.
+    Yeh package date, time, numbers, aur messages ko locale-specific format mein handle
+    karne ki sahulat provide karta hai.
+    */
     receipt.writeln(formattedDate);
     receipt.writeln();
     receipt.writeln("----------");
