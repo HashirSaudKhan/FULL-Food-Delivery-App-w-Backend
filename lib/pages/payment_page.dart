@@ -27,7 +27,7 @@ class _PaymentPageState extends State<PaymentPage> {
   Ye widget tree mein widget ke saath associate hoti hai aur unki state aur behavior ko
   maintain karne mein madad karti hai.
   */
-  
+
   /*
   Widget State Ko Access Karna: 
   GlobalKey ke istemal se aap kisi widget ke state ko access kar sakte hain,
@@ -53,6 +53,11 @@ class _PaymentPageState extends State<PaymentPage> {
           builder: (context) => AlertDialog(
                 title: const Text('Confirm Payment'),
                 content: SingleChildScrollView(
+                  /*
+                  ListBody widget Flutter mein ek layout widget hai jo kisi ListView, Column, 
+                  ya Row ke children ko organize karne mein madad karta hai.
+                  ListBody scrollable nahi hota hai ListView ki tarah
+                  */
                   child: ListBody(
                     children: [
                       Text("Card number $cardNumber"),
@@ -73,6 +78,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   // Yes button
                   TextButton(
                       onPressed: () {
+                        Navigator.pop(context);
                         Navigator.push(
                             context,
                             MaterialPageRoute(
