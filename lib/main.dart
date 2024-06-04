@@ -1,10 +1,18 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:full_food_delivery_app_with_backend/auth/login_or_registor_page.dart';
+import 'package:full_food_delivery_app_with_backend/firebase_options.dart';
 import 'package:full_food_delivery_app_with_backend/models/restaurant.dart';
 import 'package:full_food_delivery_app_with_backend/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 
-void main(){
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+    );
+
+
   runApp(
     MultiProvider(providers: [
       //theme provider 
