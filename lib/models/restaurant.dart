@@ -366,11 +366,33 @@ class Restaurant extends ChangeNotifier {
   void addToCart(Food food,List<Addon> selectedAddon){
     // see if there is a cart item already eith the same food and selected addons
     CardItem? cartItem = _cart.firstWhereOrNull((item){
+      /*
+      .firstWhereOrNull():
+      Yeh function ek collection mein se pahla element return karta hai jo ek specific condition 
+      ko satisfy karta hai.
+      Agar koi element nahi milta jo condition ko satisfy karta hai, to yeh null return karta hai.
+      Example of higher-order functions firstWhereOrNull :
+      List<int> numbers = [1, 2, 3, 4, 5];
+      int firstEvenNumber = numbers.firstWhereOrNull((element) => element % 2 == 0);
+      print(firstEvenNumber); 
+      */
       //check if the food items are the same 
       bool isSameFood = item.food == food;
 
       //check if the list of selected addons are the same
-      bool isSameAddons = ListEquality().equals(item.selectedAddon, selectedAddon);
+      bool isSameAddons = const ListEquality().equals(item.selectedAddon, selectedAddon);
+
+      /*
+      equals(item.selectedAddon, selectedAddon): Yeh "ListEquality" object ka "equals" 
+      method hai jo do lists ko compare karta hai aur yeh return karta hai ke kya woh ek jaise hain ya nahi.
+      example :
+      List<String> list1 = ["apple", "banana", "orange"];
+      List<String> list2 = ["apple", "banana", "orange"];
+
+      bool isSame = const ListEquality().equals(list1, list2);
+      print(isSame); // Output: true
+
+      */
 
       return isSameFood && isSameAddons;
     
@@ -398,6 +420,16 @@ class Restaurant extends ChangeNotifier {
 
   void removeFromCart(CardItem cartItem){
     int cartIndex = _cart.indexOf(cartItem);
+    /*
+      Example of indexof();
+      List<String> fruits = ["apple", "banana", "cherry", "banana"];
+
+      int appleIndex = fruits.indexOf("apple"); 
+      int secondBananaIndex = fruits.indexOf("banana", 1); // Start search from index 1
+
+      print(appleIndex); // Output: 0
+      print(secondBananaIndex); // Output: 3 (index of the second "banana")
+    */
     
     if(cartIndex != -1){
       if(_cart[cartIndex].quantity>1){
@@ -501,6 +533,7 @@ class Restaurant extends ChangeNotifier {
   // format double value into money 
 
   String _formatPrice(double price){
+    //fixed price upto 2 decimal places
     return "\$${price.toStringAsFixed(2)}";
   }
 
@@ -508,6 +541,16 @@ class Restaurant extends ChangeNotifier {
 
   String _formatAddons(List<Addon> addons){
     return addons.map((addon)=> "${addon.name}(${_formatPrice(addon.price)})")
+
+    /*Example of map():
+    Yeh function ek collection ke har element ko ek function se apply karta hai aur
+    ek naya collection return karta hai. Naye collection mein har element original 
+    collection ke corresponding element ke function se apply hone ke baad ka result hota hai.
+
+      List<String> names = ["Alice", "Bob", "Charlie"];
+      List<String> upperCaseNames = names.map((name) => name.toUpperCase());
+      print(upperCaseNames); // Output: ["ALICE", "BOB", "CHARLIE"]
+    */
     .join(", ");
   }
 }
