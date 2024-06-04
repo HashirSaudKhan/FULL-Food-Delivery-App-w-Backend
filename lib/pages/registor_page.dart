@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_button.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_textfield.dart';
+import 'package:full_food_delivery_app_with_backend/services/auth/auth_service.dart';
 
 class RegistorPage extends StatelessWidget {
   final Function()? onTap;
@@ -14,6 +15,38 @@ class RegistorPage extends StatelessWidget {
     TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
     TextEditingController confirmPassController = TextEditingController();
+
+    //registor method
+    void registor() async{
+      //get auth service
+      final _authService = AuthService();
+
+      //check if the password match -> create user
+      if(passwordController.text == confirmPassController.text){
+        //try creating user
+        try{
+          await _authService.signUpWithEmailPassword(emailController.text, passwordController.text);
+        }
+
+        //display any error
+        catch(e){
+          showDialog(
+            context: context, 
+            builder: (context)=> AlertDialog(
+              title: Text(e.toString()),
+            ));
+        }
+      }
+
+      //if password don't match -> show error
+      else{
+        showDialog(
+            context: context, 
+            builder: (context)=> const AlertDialog(
+              title: Text("Password don't match"),
+            ));
+      }  
+    }
 
     return  Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
@@ -55,7 +88,9 @@ class RegistorPage extends StatelessWidget {
           const SizedBox(height: 25,),
 
           //sign Up button
-          MyButton(onTap: (){}, text: 'Sign Up'),
+          MyButton(onTap: (){
+            registor;
+          }, text: 'Sign Up'),
 
           const SizedBox(height: 25,),
       

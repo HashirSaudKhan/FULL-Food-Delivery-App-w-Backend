@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:full_food_delivery_app_with_backend/auth/login_or_registor_page.dart';
+import 'package:full_food_delivery_app_with_backend/services/auth/auth_gate.dart';
+import 'package:full_food_delivery_app_with_backend/services/auth/login_or_registor_page.dart';
 import 'package:full_food_delivery_app_with_backend/firebase_options.dart';
 import 'package:full_food_delivery_app_with_backend/models/restaurant.dart';
 import 'package:full_food_delivery_app_with_backend/themes/theme_provider.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:  const LoginOrRegistorPage(),
+      home:  const AuthGate(),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }

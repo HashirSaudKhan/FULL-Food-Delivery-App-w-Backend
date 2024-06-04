@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_button.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_textfield.dart';
 import 'package:full_food_delivery_app_with_backend/pages/home_page.dart';
+import 'package:full_food_delivery_app_with_backend/services/auth/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
   final Function()? onTap;
@@ -14,14 +15,32 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+    //Controllers 
+    TextEditingController emailController = TextEditingController();
+    TextEditingController passwordController = TextEditingController();
 
   //Login method
-  void login(){
+  void login() async{
 
-    //fill out authentication here 
-    /*
+    //get instance of auth service
+    final _authService = AuthService();
 
-    */
+    //try sign in  
+    try{
+      await _authService.signInWithEmailPassword(emailController.text, passwordController.text);
+    }
+
+    //display any error
+    catch(e){
+      showDialog(
+        context: context, 
+        builder: (context){
+          return AlertDialog(
+            title: Text(e.toString()),
+          );
+        });
+    }
+
     
     //navigate to home page 
     Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage()));
@@ -30,10 +49,6 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-
-    //Controllers 
-    TextEditingController emailController = TextEditingController();
-    TextEditingController passwordController = TextEditingController();
 
     return  Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
@@ -70,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
           const SizedBox(height: 25,),
 
           //sign in button
-          MyButton(onTap: login, text: 'Sign In'),
+          MyButton(onTap: login, text: 'Log In'),
 
           const SizedBox(height: 25,),
       
