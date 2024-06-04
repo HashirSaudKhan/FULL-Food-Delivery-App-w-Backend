@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_drawer_tile.dart';
 import 'package:full_food_delivery_app_with_backend/pages/settings_page.dart';
+import 'package:full_food_delivery_app_with_backend/services/auth/auth_service.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
+
+    //Logout method
+    void logout(){
+
+      //get the instance 
+      final _authService = AuthService();
+      _authService.signOut();
+    }
     return Drawer(
       backgroundColor: Theme.of(context).colorScheme.surface,
       child: Column(
@@ -39,7 +48,7 @@ class MyDrawer extends StatelessWidget {
 
           //logout list tile
           MyDrawerTile(text: 'L O G  O U T', icon: Icons.logout, onTap: (){
-            
+            logout();           
           }),
 
           const SizedBox(height: 25.0,)

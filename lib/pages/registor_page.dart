@@ -19,13 +19,13 @@ class RegistorPage extends StatelessWidget {
     //registor method
     void registor() async{
       //get auth service
-      final _authService = AuthService();
+      final authService = AuthService();
 
       //check if the password match -> create user
       if(passwordController.text == confirmPassController.text){
         //try creating user
         try{
-          await _authService.signUpWithEmailPassword(emailController.text, passwordController.text);
+          await authService.signUpWithEmailPassword(emailController.text, passwordController.text);
         }
 
         //display any error
@@ -50,7 +50,8 @@ class RegistorPage extends StatelessWidget {
 
     return  Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
-    body: Center(
+    body: SingleChildScrollView(
+      padding: const EdgeInsets.only(top: 120),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -62,7 +63,7 @@ class RegistorPage extends StatelessWidget {
             color: Theme.of(context).colorScheme.inversePrimary),
       
             const SizedBox(height: 25,),
-
+            
           // message app slogan
           Text('Let\'s create an account for you',
           style: TextStyle(
@@ -71,38 +72,38 @@ class RegistorPage extends StatelessWidget {
           ),),
       
           const SizedBox(height: 25,),
-
+            
           // email textfields
           MyTextfield(controller: emailController, hintText: 'Email', obsecureText: false),
       
           const SizedBox(height: 25,),
-
+            
           //password textfield
           MyTextfield(controller: passwordController, hintText: 'Password', obsecureText: true),
-
+            
           const SizedBox(height: 25,),
-
+            
           //Confirm password textfield
           MyTextfield(controller: confirmPassController, hintText: 'Confirm Password', obsecureText: true),
-
+            
           const SizedBox(height: 25,),
-
+            
           //sign Up button
           MyButton(onTap: (){
-            registor;
+            registor();
           }, text: 'Sign Up'),
-
+            
           const SizedBox(height: 25,),
       
           // already have an account? Login now
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-
+            
               Text('already have an account?',style: TextStyle(
                 color: Theme.of(context).colorScheme.inversePrimary,
               ),),
-
+            
               const SizedBox(width: 4,),
               
             GestureDetector(

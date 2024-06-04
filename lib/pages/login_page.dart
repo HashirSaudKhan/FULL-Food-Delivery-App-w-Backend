@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_button.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_textfield.dart';
-import 'package:full_food_delivery_app_with_backend/pages/home_page.dart';
 import 'package:full_food_delivery_app_with_backend/services/auth/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
@@ -43,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
 
     
     //navigate to home page 
-    Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage()));
+    //Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage()));
 
   }
 
