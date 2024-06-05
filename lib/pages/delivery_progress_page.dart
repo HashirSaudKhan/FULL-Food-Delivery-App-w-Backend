@@ -23,6 +23,21 @@ class _DeliveryProgressPageState extends State<DeliveryProgressPage> {
     //if we get to this page, submit order to firestore db
     String receipt = context.read<Restaurant>().displayCartReceipt();
     db.saveOrderToDatabase(receipt);
+    /*
+    context.read<T>() ek Flutter ka feature hai jo Flutter ki Provider library ke saath aata hai.
+    Ye ek tarah ka "dependency injection" mechanism provide karta hai.
+    Dependency injection ka matlab hai ki aap kisi class ya object ko kisi dusre class ya function mein inject kar sakte hain, taaki wo class ya function us object ki properties ya methods ka use kar sake.
+
+    context.read<T>() ka use karte waqt, aap apne widget tree ke context se T type ka object retrieve 
+    kar sakte hain. Yeh object aapne pehle Provider ke zariye provide kiya hota hai.
+
+    Is tareeke se, aap apne widget tree ke kisi bhi level se kisi bhi 
+    class ya object ko access kar sakte hain, bina directly widget tree ko traverse kiye.
+
+    Yeh ek bahut powerful technique hai jo Flutter mein state management aur code organization 
+    ko simplify karta hai. Iske use se aap apne code ko modular bana sakte hain 
+    aur code ko easily maintainable banane mein madad milti hai.
+    */
   }
 
 
