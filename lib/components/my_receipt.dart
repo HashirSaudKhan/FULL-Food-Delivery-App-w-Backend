@@ -45,7 +45,7 @@ String getEstimatedDeliveryTime() {
                 }),
             ),
             const SizedBox(height: 25,),
-            Text("Estimated delivery time is:${getEstimatedDeliveryTime()}")
+            Text("Estimated delivery time is: ${getEstimatedDeliveryTime()}")
           ],
         ),
       ),

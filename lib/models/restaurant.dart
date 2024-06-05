@@ -512,6 +512,7 @@ class Restaurant extends ChangeNotifier {
     receipt.writeln();
 
     //format the date to include up to second only
+    //convert date to string here
     String formattedDate = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
     /*
     DateFormat() class Dart ke intl package mein define ki gayi hai. intl package, 
