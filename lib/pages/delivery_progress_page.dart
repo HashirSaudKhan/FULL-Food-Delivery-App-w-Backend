@@ -1,15 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_receipt.dart';
+import 'package:full_food_delivery_app_with_backend/models/restaurant.dart';
+import 'package:full_food_delivery_app_with_backend/services/database/firestore_options.dart';
+import 'package:provider/provider.dart';
 
-class DeliveryProgressPage extends StatelessWidget {
+class DeliveryProgressPage extends StatefulWidget {
   const DeliveryProgressPage({super.key});
+
+  @override
+  State<DeliveryProgressPage> createState() => _DeliveryProgressPageState();
+}
+
+class _DeliveryProgressPageState extends State<DeliveryProgressPage> {
+
+  //get acces to db 
+  FirestoreServices db = FirestoreServices();
+
+  @override
+  void initState(){
+    super.initState();
+
+    //if we get to this page, submit order to firestore db
+    String receipt = context.read<Restaurant>().displayCartReceipt();
+    db.saveOrderToDatabase(receipt);
+  }
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Delivery in Progress.."),
+        // title: const Text("Delivery in Progress.."),
         backgroundColor: Colors.transparent,
       ),
       bottomNavigationBar: _buildBottonNavBar(context),
@@ -21,6 +43,7 @@ class DeliveryProgressPage extends StatelessWidget {
 
 
   }
+
     //Custom Bottom Nav Bar - Message / call delivery driver
     Widget _buildBottonNavBar(BuildContext context){
       return Container(
