@@ -25,12 +25,25 @@ class Restaurant extends ChangeNotifier {
           Addon(name: 'Avocado', price: 0.99),
         ]),
     Food(
-        name: 'BBQ Bacon Burger',
+        name: 'Bacon BBQ Burger',
         description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
+            'A savory patty with crispy bacon, melted cheddar, lettuce, tomato, and a tangy BBQ sauce.',
+        imagePath:
+            'lib/images/burgers/BBBQ.png',
+        price: 1.49,
+        catagory: FoodCatagories.burger,
+        availableAddons: [
+          Addon(name: 'Extra cheese', price: 0.99),
+          Addon(name: 'Bacin', price: 0.99),
+          Addon(name: 'Avocado', price: 0.99),
+        ]),
+    Food(
+        name: 'Mushroom Swiss Burger',
+        description:
+            'A flavorful patty with sautéed mushrooms, melted Swiss cheese, lettuce, and a hint of thyme.',
         imagePath:
             'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
-        price: 0.99,
+        price: 1.29,
         catagory: FoodCatagories.burger,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
@@ -38,12 +51,12 @@ class Restaurant extends ChangeNotifier {
           Addon(name: 'Avocado', price: 0.99),
         ]),
     Food(
-        name: 'Veggie Burger',
+        name: 'Jalapeno Popper Burger',
         description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
+            'A spicy patty with crispy jalapeno peppers, melted cheddar, lettuce, and a creamy ranch sauce.',
         imagePath:
-            'lib/images/burgers/burger_2.jpg',
-        price: 0.99,
+            'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
+        price: 1.69,
         catagory: FoodCatagories.burger,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
@@ -51,25 +64,12 @@ class Restaurant extends ChangeNotifier {
           Addon(name: 'Avocado', price: 0.99),
         ]),
     Food(
-        name: 'Aloha Burger',
+        name: 'Greek Burger',
         description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
+            'A Mediterranean-inspired patty with feta cheese, olives, lettuce, and a zesty tzatziki sauce.',
         imagePath:
-            'lib/images/burgers/burger_3.jpg',
-        price: 0.99,
-        catagory: FoodCatagories.burger,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
-    Food(
-        name: 'Blue Moon Burger',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/burger_3.jpg',
-        price: 0.99,
+            'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
+        price: 1.99,
         catagory: FoodCatagories.burger,
         availableAddons: [
           Addon(name: 'Extra cheese', price: 0.99),
@@ -82,8 +82,7 @@ class Restaurant extends ChangeNotifier {
         name: 'Ceaser Salad',
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/salads/salad_1.png',
+        imagePath: 'lib/images/salads/salad_1.png',
         price: 0.99,
         catagory: FoodCatagories.salads,
         availableAddons: [
@@ -95,8 +94,7 @@ class Restaurant extends ChangeNotifier {
         name: 'Greek Salad',
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/salads/salad_2.png',
+        imagePath: 'lib/images/salads/salad_2.png',
         price: 0.99,
         catagory: FoodCatagories.salads,
         availableAddons: [
@@ -108,8 +106,7 @@ class Restaurant extends ChangeNotifier {
         name: 'Quinoa Salad',
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/salads/salad_3.png',
+        imagePath: 'lib/images/salads/salad_3.png',
         price: 0.99,
         catagory: FoodCatagories.salads,
         availableAddons: [
@@ -121,8 +118,7 @@ class Restaurant extends ChangeNotifier {
         name: 'Asian Sesame Salad',
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/salads/salad_4.png',
+        imagePath: 'lib/images/salads/salad_4.png',
         price: 0.99,
         catagory: FoodCatagories.salads,
         availableAddons: [
@@ -134,8 +130,7 @@ class Restaurant extends ChangeNotifier {
         name: 'South West Chicken Salad',
         description:
             'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/salads/salad_5.png',
+        imagePath: 'lib/images/salads/salad_5.png',
         price: 0.99,
         catagory: FoodCatagories.salads,
         availableAddons: [
@@ -346,7 +341,6 @@ class Restaurant extends ChangeNotifier {
         ]),
   ];
 
-
   /*
   G E T T E R S
   */
@@ -364,12 +358,11 @@ class Restaurant extends ChangeNotifier {
   //delivery address (which user can change/update)
   String _deliveryAddress = "Rc_39 Khuramabad";
 
-
   // add to cart
-  
-  void addToCart(Food food,List<Addon> selectedAddon){
+
+  void addToCart(Food food, List<Addon> selectedAddon) {
     // see if there is a cart item already eith the same food and selected addons
-    CardItem? cartItem = _cart.firstWhereOrNull((item){
+    CardItem? cartItem = _cart.firstWhereOrNull((item) {
       /*
       .firstWhereOrNull():
       Yeh function ek collection mein se pahla element return karta hai jo ek specific condition 
@@ -380,11 +373,12 @@ class Restaurant extends ChangeNotifier {
       int firstEvenNumber = numbers.firstWhereOrNull((element) => element % 2 == 0);
       print(firstEvenNumber); 
       */
-      //check if the food items are the same 
+      //check if the food items are the same
       bool isSameFood = item.food == food;
 
       //check if the list of selected addons are the same
-      bool isSameAddons = const ListEquality().equals(item.selectedAddon, selectedAddon);
+      bool isSameAddons =
+          const ListEquality().equals(item.selectedAddon, selectedAddon);
 
       /*
       equals(item.selectedAddon, selectedAddon): Yeh "ListEquality" object ka "equals" 
@@ -399,30 +393,24 @@ class Restaurant extends ChangeNotifier {
       */
 
       return isSameFood && isSameAddons;
-    
     });
 
     // if item already exists, increase it's quantity
-    if(cartItem != null){
+    if (cartItem != null) {
       cartItem.quantity++;
     }
 
-    // otherwise, add a new cart item to the cart 
-    else{
-      _cart.add(
-        CardItem(
-          food: food, 
-          selectedAddon: selectedAddon)
-      );
+    // otherwise, add a new cart item to the cart
+    else {
+      _cart.add(CardItem(food: food, selectedAddon: selectedAddon));
     }
 
     notifyListeners();
   }
 
-
   // remove from cart
 
-  void removeFromCart(CardItem cartItem){
+  void removeFromCart(CardItem cartItem) {
     int cartIndex = _cart.indexOf(cartItem);
     /*
       Example of indexof();
@@ -434,41 +422,38 @@ class Restaurant extends ChangeNotifier {
       print(appleIndex); // Output: 0
       print(secondBananaIndex); // Output: 3 (index of the second "banana")
     */
-    
-    if(cartIndex != -1){
-      if(_cart[cartIndex].quantity>1){
+
+    if (cartIndex != -1) {
+      if (_cart[cartIndex].quantity > 1) {
         _cart[cartIndex].quantity--;
-      }else{
+      } else {
         _cart.removeAt(cartIndex);
       }
-
     }
     notifyListeners();
   }
 
-  // get total price of cart 
+  // get total price of cart
   double getTotalPrice() {
     double total = 0.0;
 
-    for (CardItem cardItem in _cart){
+    for (CardItem cardItem in _cart) {
       double itemTotal = cardItem.food.price;
-      
-      for (Addon addon in cardItem.selectedAddon){
+
+      for (Addon addon in cardItem.selectedAddon) {
         itemTotal += addon.price;
       }
       total += itemTotal;
     }
     return total;
-    
   }
-
 
   // get total number of items in cart
 
-  int getTotalItemCount(){
+  int getTotalItemCount() {
     int totalItemCount = 0;
 
-    for (CardItem cardItem in _cart){
+    for (CardItem cardItem in _cart) {
       totalItemCount += cardItem.quantity;
     }
 
@@ -477,25 +462,24 @@ class Restaurant extends ChangeNotifier {
 
   //clear cart
 
-  void clearCard(){
+  void clearCard() {
     _cart.clear();
     notifyListeners();
   }
-  
-  //update delivery address 
-  void updateDeliveryAddress(String newAddress){
+
+  //update delivery address
+  void updateDeliveryAddress(String newAddress) {
     _deliveryAddress = newAddress;
     notifyListeners();
-
   }
-  
+
   /*
    H E L P E R S
   */
 
   // generate a receipt
 
-  String displayCartReceipt(){
+  String displayCartReceipt() {
     final receipt = StringBuffer();
     /*
     StringBuffer class Dart mein mutable strings ko efficiently concatenate karne ke liye use hoti hai. 
@@ -513,7 +497,8 @@ class Restaurant extends ChangeNotifier {
 
     //format the date to include up to second only
     //convert date to string here
-    String formattedDate = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
+    String formattedDate =
+        DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
     /*
     DateFormat() class Dart ke intl package mein define ki gayi hai. intl package, 
     Internationalization (i18n) aur Localization (l10n) ke liye use hota hai.
@@ -524,40 +509,39 @@ class Restaurant extends ChangeNotifier {
     receipt.writeln();
     receipt.writeln("----------");
 
-    for(final cartItem in _cart){
+    for (final cartItem in _cart) {
       receipt.writeln(
-        "${cartItem.quantity} x ${cartItem.food.name} - ${_formatPrice(cartItem.food.price)}"
-      );
-      if(cartItem.selectedAddon.isNotEmpty){
-        receipt.writeln(
-          "Add-ons : ${_formatAddons(cartItem.selectedAddon)}");
+          "${cartItem.quantity} x ${cartItem.food.name} - ${_formatPrice(cartItem.food.price)}");
+      if (cartItem.selectedAddon.isNotEmpty) {
+        receipt.writeln("Add-ons : ${_formatAddons(cartItem.selectedAddon)}");
       }
       receipt.writeln();
     }
 
-        receipt.writeln("----------");
-        receipt.writeln();
-        receipt.writeln("Total Items: ${getTotalItemCount()}");
-        receipt.writeln("Total Price: ${_formatPrice(getTotalPrice())}");
-        receipt.writeln();
-        receipt.writeln("Delivery to: $deliveryAddress");
+    receipt.writeln("----------");
+    receipt.writeln();
+    receipt.writeln("Total Items: ${getTotalItemCount()}");
+    receipt.writeln("Total Price: ${_formatPrice(getTotalPrice())}");
+    receipt.writeln();
+    receipt.writeln("Delivery to: $deliveryAddress");
 
-        return receipt.toString();
+    return receipt.toString();
   }
 
-  // format double value into money 
+  // format double value into money
 
-  String _formatPrice(double price){
+  String _formatPrice(double price) {
     //fixed price upto 2 decimal places
     return "\$${price.toStringAsFixed(2)}";
   }
 
-  // format list of addons into a string summary 
+  // format list of addons into a string summary
 
-  String _formatAddons(List<Addon> addons){
-    return addons.map((addon)=> "${addon.name}(${_formatPrice(addon.price)})")
+  String _formatAddons(List<Addon> addons) {
+    return addons
+        .map((addon) => "${addon.name}(${_formatPrice(addon.price)})")
 
-    /*Example of map():
+        /*Example of map():
     Yeh function ek collection ke har element ko ek function se apply karta hai aur
     ek naya collection return karta hai. Naye collection mein har element original 
     collection ke corresponding element ke function se apply hone ke baad ka result hota hai.
@@ -566,6 +550,6 @@ class Restaurant extends ChangeNotifier {
       List<String> upperCaseNames = names.map((name) => name.toUpperCase());
       print(upperCaseNames); // Output: ["ALICE", "BOB", "CHARLIE"]
     */
-    .join(", ");
+        .join(", ");
   }
 }
