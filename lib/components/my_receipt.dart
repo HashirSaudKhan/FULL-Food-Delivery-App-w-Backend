@@ -1,10 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:full_food_delivery_app_with_backend/models/restaurant.dart';
-import 'package:provider/provider.dart';
+import 'package:intl/intl.dart';
+import 'package:provider/provider.dart'; // Required to initialize date formatting data
+
 
 class MyReceipt extends StatelessWidget {
   const MyReceipt({super.key});
+
+String getEstimatedDeliveryTime() {
+  // Get the current time
+  DateTime now = DateTime.now();
+  
+  // Add 30 minutes to the current time
+  DateTime estimatedDeliveryTime = now.add(const Duration(minutes: 30));
+  
+  // Format the time
+  String formattedTime = DateFormat('hh:mm a').format(estimatedDeliveryTime);
+  
+  return formattedTime;
+}
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +45,7 @@ class MyReceipt extends StatelessWidget {
                 }),
             ),
             const SizedBox(height: 25,),
-            const Text("Estimated delivery time is: 7:00pm")
+            Text("Estimated delivery time is:${getEstimatedDeliveryTime()}")
           ],
         ),
       ),

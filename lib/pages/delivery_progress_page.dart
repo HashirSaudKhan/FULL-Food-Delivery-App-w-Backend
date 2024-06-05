@@ -35,10 +35,12 @@ class _DeliveryProgressPageState extends State<DeliveryProgressPage> {
         backgroundColor: Colors.transparent,
       ),
       bottomNavigationBar: _buildBottonNavBar(context),
-      body: const Column(
-        children: [
-          MyReceipt()
-        ],),
+      body: const SingleChildScrollView(
+        child: Column(
+          children: [
+            MyReceipt()
+          ],),
+      ),
     );
 
 
