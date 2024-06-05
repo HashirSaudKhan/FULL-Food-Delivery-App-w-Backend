@@ -352,6 +352,7 @@ class Restaurant extends ChangeNotifier {
   */
   List<Food> get menu => _menu;
   List<CardItem> get cart => _cart;
+  String get deliveryAddress => _deliveryAddress;
 
   /*
   O P E R A T I O N S
@@ -359,6 +360,9 @@ class Restaurant extends ChangeNotifier {
 
   //User cart
   final List<CardItem> _cart = [];
+
+  //delivery address (which user can change/update)
+  String _deliveryAddress = "Rc_39 Khuramabad";
 
 
   // add to cart
@@ -477,6 +481,14 @@ class Restaurant extends ChangeNotifier {
     _cart.clear();
     notifyListeners();
   }
+  
+  //update delivery address 
+  void updateDeliveryAddress(String newAddress){
+    _deliveryAddress = newAddress;
+    notifyListeners();
+
+  }
+  
   /*
    H E L P E R S
   */
