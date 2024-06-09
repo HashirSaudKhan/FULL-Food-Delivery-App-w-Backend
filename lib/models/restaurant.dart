@@ -88,7 +88,6 @@ class Restaurant extends ChangeNotifier {
         Addon(name: 'Extra feta', price: 0.99),
       ],
     ),
-
     Food(
       name: 'Spinach Salad',
       description:
@@ -102,7 +101,6 @@ class Restaurant extends ChangeNotifier {
         Addon(name: 'Extra bacon', price: 0.99),
       ],
     ),
-
     Food(
       name: 'Caprese Salad',
       description:
@@ -129,7 +127,6 @@ class Restaurant extends ChangeNotifier {
         Addon(name: 'Garlic bread', price: 1.49),
       ],
     ),
-
     Food(
       name: 'Southwest Salad',
       description:
@@ -146,70 +143,67 @@ class Restaurant extends ChangeNotifier {
 
     //sides
     Food(
-        name: 'Classic Sides',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
-        catagory: FoodCatagories.sides,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'French Fries',
+      description: 'Crunchy and golden, our fries are cooked to perfection.',
+      imagePath: 'lib/images/sides/french_fries.png',
+      price: 2.99,
+      catagory: FoodCatagories.sides,
+      availableAddons: [
+        Addon(name: 'Cheese sauce', price: 0.99),
+        Addon(name: 'Bacon bits', price: 0.99),
+      ],
+    ),
+
     Food(
-        name: 'Classic Sides',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
-        catagory: FoodCatagories.sides,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Onion Rings',
+      description: 'Crispy onion rings breaded and fried to a golden brown.',
+      imagePath: 'lib/images/sides/onion_ring.png',
+      price: 3.49,
+      catagory: FoodCatagories.sides,
+      availableAddons: [
+        Addon(name: 'Ranch dressing', price: 0.49),
+        Addon(name: 'BBQ sauce', price: 0.49),
+      ],
+    ),
+
     Food(
-        name: 'Classic Sides',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
-        catagory: FoodCatagories.sides,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Sweet Potato Fries',
+      description:
+          'Sweet and crispy, our sweet potato fries are a delicious twist on a classic.',
+      imagePath: 'lib/images/sides/sweet_p_f.png',
+      price: 3.99,
+      catagory: FoodCatagories.sides,
+      availableAddons: [
+        Addon(name: 'Honey mustard', price: 0.49),
+        Addon(name: 'Cinnamon sugar', price: 0.49),
+      ],
+    ),
+
     Food(
-        name: 'Classic Sides',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
-        catagory: FoodCatagories.sides,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Coleslaw',
+      description:
+          'A refreshing side of creamy coleslaw made with shredded cabbage and a hint of vinegar.',
+      imagePath: 'lib/images/sides/Coleslaw.png',
+      price: 1.99,
+      catagory: FoodCatagories.sides,
+      availableAddons: [
+        Addon(name: 'Carrots', price: 0.49),
+        Addon(name: 'Raisins', price: 0.49),
+      ],
+    ),
+
     Food(
-        name: 'Classic Sides',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
-        catagory: FoodCatagories.sides,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Baked Beans',
+      description:
+          'Sweet and smoky, our baked beans are a classic BBQ side dish.',
+      imagePath: 'lib/images/sides/Baked Beans.png',
+      price: 2.49,
+      catagory: FoodCatagories.sides,
+      availableAddons: [
+        Addon(name: 'Bacon bits', price: 0.99),
+        Addon(name: 'Brown sugar', price: 0.49),
+      ],
+    ),
 
     //desserts
     Food(
