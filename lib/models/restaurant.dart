@@ -207,69 +207,63 @@ class Restaurant extends ChangeNotifier {
 
     //desserts
     Food(
-        name: 'Classic desserts',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
-        catagory: FoodCatagories.desserts,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Cheesecake',
+      description: 'A rich and creamy cheesecake with a graham cracker crust.',
+      imagePath: 'lib/images/desserts/Cheesecake.png',
+      price: 4.99,
+      catagory: FoodCatagories.desserts,
+      availableAddons: [
+        Addon(name: 'Strawberry sauce', price: 0.99),
+        Addon(name: 'Whipped cream', price: 0.99),
+        Addon(name: 'Whipped cream', price: 0.99),
+      ],
+    ),
+
     Food(
-        name: 'Classic desserts',
+        name: 'Chocolate Cake',
         description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
+            'Moist and decadent chocolate cake with chocolate frosting.',
+        imagePath: 'lib/images/desserts/Chocolate Cake.png',
+        price: 5.99,
         catagory: FoodCatagories.desserts,
         availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
+          Addon(name: 'Vanilla ice cream', price: 1.99),
+          Addon(name: 'Caramel sauce', price: 0.99),
         ]),
+
     Food(
-        name: 'Classic desserts',
+        name: 'Tiramisu',
         description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
+            'Coffee-soaked ladyfingers layered with mascarpone cheese.',
+        imagePath: 'lib/images/desserts/Tiramisu.png',
+        price: 6.99,
         catagory: FoodCatagories.desserts,
         availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
+          Addon(name: 'Espresso shot', price: 1.99),
+          Addon(name: 'Whipped cream', price: 0.99),
         ]),
+
     Food(
-        name: 'Classic desserts',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
+        name: 'Strawberry Frosted Donut',
+        description: 'Sweet strawberry frosted donut, topped with sprinkles.',
+        imagePath: 'lib/images/desserts/Strawberry Frosted Donut.png',
+        price: 2.49,
         catagory: FoodCatagories.desserts,
         availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
+          Addon(name: 'Extra strawberry frosting', price: 0.50),
+          Addon(name: 'Fresh strawberries', price: 0.50),
         ]),
+
     Food(
-        name: 'Classic desserts',
+        name: 'Brownies',
         description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
+            'Rich and fudgy brownies, perfect for satisfying your sweet tooth.',
+        imagePath: 'lib/images/desserts/Brownies.png',
+        price: 2.99,
         catagory: FoodCatagories.desserts,
         availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
+          Addon(name: 'Vanilla ice cream', price: 1.99),
+          Addon(name: 'Hot fudge', price: 0.99),
         ]),
 
     //drinks
