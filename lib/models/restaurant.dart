@@ -28,8 +28,7 @@ class Restaurant extends ChangeNotifier {
         name: 'Bacon BBQ Burger',
         description:
             'A savory patty with crispy bacon, melted cheddar, lettuce, tomato, and a tangy BBQ sauce.',
-        imagePath:
-            'lib/images/burgers/BBBQ.png',
+        imagePath: 'lib/images/burgers/BBBQ.png',
         price: 1.49,
         catagory: FoodCatagories.burger,
         availableAddons: [
@@ -41,8 +40,7 @@ class Restaurant extends ChangeNotifier {
         name: 'Mushroom Swiss Burger',
         description:
             'A flavorful patty with sautéed mushrooms, melted Swiss cheese, lettuce, and a hint of thyme.',
-        imagePath:
-            'lib/images/burgers/msb1.png',
+        imagePath: 'lib/images/burgers/msb1.png',
         price: 1.29,
         catagory: FoodCatagories.burger,
         availableAddons: [
@@ -54,8 +52,7 @@ class Restaurant extends ChangeNotifier {
         name: 'Jalapeno Popper Burger',
         description:
             'A spicy patty with crispy jalapeno peppers, melted cheddar, lettuce, and a creamy ranch sauce.',
-        imagePath:
-            'lib/images/burgers/jpb.png',
+        imagePath: 'lib/images/burgers/jpb.png',
         price: 1.69,
         catagory: FoodCatagories.burger,
         availableAddons: [
@@ -67,8 +64,7 @@ class Restaurant extends ChangeNotifier {
         name: 'Greek Burger',
         description:
             'A Mediterranean-inspired patty with feta cheese, olives, lettuce, and a zesty tzatziki sauce.',
-        imagePath:
-            'lib/images/burgers/GB.png',
+        imagePath: 'lib/images/burgers/GB.png',
         price: 1.99,
         catagory: FoodCatagories.burger,
         availableAddons: [
@@ -78,66 +74,75 @@ class Restaurant extends ChangeNotifier {
         ]),
 
     //salads
+
     Food(
-        name: 'Ceaser Salad',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath: 'lib/images/salads/salad_1.png',
-        price: 0.99,
-        catagory: FoodCatagories.salads,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Greek Salad',
+      description:
+          'A refreshing mix of feta cheese, olives, cucumber, and tomatoes, topped with a zesty Greek dressing.',
+      imagePath: 'lib/images/salads/salad_1.png',
+      price: 1.49,
+      catagory: FoodCatagories.salads,
+      availableAddons: [
+        Addon(name: 'Grilled chicken', price: 1.99),
+        Addon(name: 'Croutons', price: 0.49),
+        Addon(name: 'Extra feta', price: 0.99),
+      ],
+    ),
+
     Food(
-        name: 'Greek Salad',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath: 'lib/images/salads/salad_2.png',
-        price: 0.99,
-        catagory: FoodCatagories.salads,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Spinach Salad',
+      description:
+          'Fresh baby spinach leaves, crispy bacon, and sweet cherry tomatoes, topped with a warm bacon vinaigrette.',
+      imagePath: 'lib/images/salads/salad_2.png',
+      price: 1.29,
+      catagory: FoodCatagories.salads,
+      availableAddons: [
+        Addon(name: 'Grilled shrimp', price: 2.99),
+        Addon(name: 'Candied pecans', price: 0.99),
+        Addon(name: 'Extra bacon', price: 0.99),
+      ],
+    ),
+
     Food(
-        name: 'Quinoa Salad',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath: 'lib/images/salads/salad_3.png',
-        price: 0.99,
-        catagory: FoodCatagories.salads,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Caprese Salad',
+      description:
+          'Fresh mozzarella, ripe tomatoes, and fragrant basil, dressed with olive oil and balsamic glaze.',
+      imagePath: 'lib/images/salads/salad_3.png',
+      price: 1.99,
+      catagory: FoodCatagories.salads,
+      availableAddons: [
+        Addon(name: 'Prosciutto', price: 1.99),
+        Addon(name: 'Burrata cheese', price: 2.99),
+        Addon(name: 'Extra basil', price: 0.49),
+      ],
+    ),
     Food(
-        name: 'Asian Sesame Salad',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath: 'lib/images/salads/salad_4.png',
-        price: 0.99,
-        catagory: FoodCatagories.salads,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Chicken Caesar Salad',
+      description:
+          'Grilled chicken, croutons, and parmesan cheese on a bed of romaine lettuce, tossed in a tangy Caesar dressing.',
+      imagePath: 'lib/images/salads/salad_4.png',
+      price: 2.49,
+      catagory: FoodCatagories.salads,
+      availableAddons: [
+        Addon(name: 'Extra chicken', price: 1.99),
+        Addon(name: 'Anchovies', price: 0.99),
+        Addon(name: 'Garlic bread', price: 1.49),
+      ],
+    ),
+
     Food(
-        name: 'South West Chicken Salad',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath: 'lib/images/salads/salad_5.png',
-        price: 0.99,
-        catagory: FoodCatagories.salads,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Southwest Salad',
+      description:
+          'A flavorful mix of grilled chicken, black beans, corn, and pepper jack cheese, topped with crispy tortilla strips and a spicy ranch dressing.',
+      imagePath: 'lib/images/salads/salad_5.png',
+      price: 2.99,
+      catagory: FoodCatagories.salads,
+      availableAddons: [
+        Addon(name: 'Guacamole', price: 1.99),
+        Addon(name: 'Sliced avocado', price: 0.99),
+        Addon(name: 'Crushed red pepper', price: 0.49),
+      ],
+    ),
 
     //sides
     Food(
