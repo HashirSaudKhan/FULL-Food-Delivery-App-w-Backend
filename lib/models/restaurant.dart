@@ -42,7 +42,7 @@ class Restaurant extends ChangeNotifier {
         description:
             'A flavorful patty with sautéed mushrooms, melted Swiss cheese, lettuce, and a hint of thyme.',
         imagePath:
-            'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
+            'lib/images/burgers/msb1.png',
         price: 1.29,
         catagory: FoodCatagories.burger,
         availableAddons: [
@@ -55,7 +55,7 @@ class Restaurant extends ChangeNotifier {
         description:
             'A spicy patty with crispy jalapeno peppers, melted cheddar, lettuce, and a creamy ranch sauce.',
         imagePath:
-            'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
+            'lib/images/burgers/jpb.png',
         price: 1.69,
         catagory: FoodCatagories.burger,
         availableAddons: [
@@ -68,7 +68,7 @@ class Restaurant extends ChangeNotifier {
         description:
             'A Mediterranean-inspired patty with feta cheese, olives, lettuce, and a zesty tzatziki sauce.',
         imagePath:
-            'lib/images/burgers/—Pngtree—juicy burgers with a transparent_9002761.png',
+            'lib/images/burgers/GB.png',
         price: 1.99,
         catagory: FoodCatagories.burger,
         availableAddons: [
