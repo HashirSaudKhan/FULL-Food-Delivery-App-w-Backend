@@ -267,71 +267,60 @@ class Restaurant extends ChangeNotifier {
         ]),
 
     //drinks
+
     Food(
-        name: 'drinks',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
-        catagory: FoodCatagories.drinks,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Ginger Ale',
+      description: 'A spicy and refreshing soda perfect for any occasion.',
+      imagePath: 'lib/images/drinks/Ginger Ale.png',
+      price: 1.99,
+      catagory: FoodCatagories.drinks,
+      availableAddons: [
+        Addon(name: 'Lime', price: 0.25),
+      ],
+    ),
     Food(
-        name: 'drinks',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
-        catagory: FoodCatagories.drinks,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Pineapple Juice',
+      description:
+          'A refreshing and sweet juice made from 100% pineapple juice.',
+      imagePath: 'lib/images/drinks/Pomegranate Juice.png',
+      price: 2.99,
+      catagory: FoodCatagories.drinks,
+      availableAddons: [
+        Addon(name: 'Lime', price: 0.25),
+      ],
+    ),
     Food(
-        name: 'drinks',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
-        catagory: FoodCatagories.drinks,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Orange Juice',
+      description:
+          'A refreshing and healthy drink made with 100% orange juice.',
+      imagePath: 'lib/images/drinks/Orange Juice.png',
+      price: 2.99,
+      catagory: FoodCatagories.drinks,
+      availableAddons: [
+        Addon(name: 'Lime', price: 0.25),
+      ],
+    ),
     Food(
-        name: 'drinks',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
-        catagory: FoodCatagories.drinks,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Iced Tea',
+      description: 'A soothing and thirst-quenching tea served over ice.',
+      imagePath: 'lib/images/drinks/Iced Tea.png',
+      price: 1.49,
+      catagory: FoodCatagories.drinks,
+      availableAddons: [
+        Addon(name: 'Lemon', price: 0.25),
+        Addon(name: 'Honey', price: 0.25),
+      ],
+    ),
     Food(
-        name: 'drinks',
-        description:
-            'A juicy patty with melted chedder, lettuce, tomato, and a hint of onion and pickle.',
-        imagePath:
-            'lib/images/burgers/food-photographer-E94j3rMcxlw-unsplash.jpg',
-        price: 0.99,
-        catagory: FoodCatagories.drinks,
-        availableAddons: [
-          Addon(name: 'Extra cheese', price: 0.99),
-          Addon(name: 'Bacin', price: 0.99),
-          Addon(name: 'Avocado', price: 0.99),
-        ]),
+      name: 'Fresh Lemonade',
+      description: 'A sweet and tangy drink made with real lemons and sugar.',
+      imagePath: 'lib/images/drinks/Fresh Lemonade.png',
+      price: 2.49,
+      catagory: FoodCatagories.drinks,
+      availableAddons: [
+        Addon(name: 'Mint', price: 0.50),
+      ],
+    ),
   ];
 
   /*
