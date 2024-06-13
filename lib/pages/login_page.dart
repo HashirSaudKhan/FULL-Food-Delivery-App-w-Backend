@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_button.dart';
 import 'package:full_food_delivery_app_with_backend/components/my_textfield.dart';
 import 'package:full_food_delivery_app_with_backend/services/auth/auth_service.dart';
+import 'package:lottie/lottie.dart';
 
 class LoginPage extends StatefulWidget {
   final Function()? onTap;
@@ -57,12 +58,9 @@ class _LoginPageState extends State<LoginPage> {
         children: [
         
           //logo 
-          Icon(
-            Icons.lock_open_rounded,
-            size : 100,
-            color: Theme.of(context).colorScheme.inversePrimary),
+          Lottie.asset('lib/animations/food_delivery_truck.json',height: 250),
       
-            const SizedBox(height: 25,),
+            //const SizedBox(height: 25,),
 
           // message app slogan
           Text('Food Delivery App',
