@@ -14,9 +14,8 @@ class FoodTile extends StatelessWidget {
         GestureDetector(
           //Navigator to the FoodPage
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context)=> FoodPage(food: food)));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => FoodPage(food: food)));
           },
           child: Padding(
             padding: const EdgeInsets.all(15.0),
@@ -51,7 +50,7 @@ class FoodTile extends StatelessWidget {
                 //food Image
                 ClipRRect(
                     borderRadius: BorderRadius.circular(10),
-                    child: Image.asset(
+                    child: Image.network(
                       food.imagePath,
                       height: 120,
                       width: 110,
