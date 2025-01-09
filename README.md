@@ -68,12 +68,6 @@ Firebase Firestore is used to generate order slips and store order data.
 
 ### 4.4 API Development (Express.js)
 APIs built with Express.js handle data exchange between the app and the backend.
-
-**Key Endpoints:**
-- `GET /restaurants`: Fetches restaurant data.
-- `GET /menu/restaurant`: Retrieves the menu for a specific restaurant.
-- `POST /order`: Places a new order.
-
 ---
 ![api pic](https://github.com/user-attachments/assets/2f94cef8-92db-4209-a405-b9d3b2d87506)
 
@@ -82,8 +76,7 @@ This section details the interaction between various components:
 
 1. **Authentication:** User logs in using Firebase.
 2. **Data Retrieval:** Express.js APIs fetch restaurant/menu data from MongoDB Atlas.
-3. **Order Placement:** Order data is sent to MongoDB using a POST API.
-4. **Order Tracking:** Updates are pushed to the user in real-time.
+3. **Order Placement:** Order data is sent to firestore.
 
 ---
 
